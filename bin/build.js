@@ -1,6 +1,7 @@
 /* eslint-disable no-await-in-loop */
 const fs = require('fs-extra');
 const path = require('path');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const globby = require('globby');
 
 const ICONS_PATH = path.join(process.cwd(), 'node_modules', 'dripicons', 'SVG');
@@ -17,15 +18,6 @@ const kebabToCamel = (text) => {
   if (!text) return null;
   return text.replace(/-\w/g, clearAndUpper);
 };
-
-const initialTypeDefinitions = `/// <reference types="react" />
-import { FC, SVGAttributes } from 'react';
-export interface IconProps extends SVGAttributes<SVGElement> {
-  color?: string;
-  size?: string | number;
-}
-export type Icon = FC<IconProps>;
-`;
 
 const generateComponentName = (file) => kebabToPascal(file.replace('.svg', ''));
 
@@ -99,8 +91,9 @@ const writeStory = async (fileName, data) => {
 
 const generateTest = (componentName, fileName) => {
   const template = `
-    import ${componentName} from 'icons/${fileName}';
-    import { render } from 'utils/testUtils';
+    import { render } from '@testing-library/react';
+
+    import ${componentName} from './${fileName}';
 
     describe('< ${componentName} />', () => {
       it('matches the snapshot', () => {
@@ -141,6 +134,7 @@ const generateTypeDef = (componentName) => `export const ${componentName}: Icon;
 const main = async () => {
   await fs.ensureDir(OUTPUT_DIR);
   const files = await globby('*.svg', { cwd: ICONS_PATH });
+  const numFiles = files.length;
   const queue = [...files].sort();
   const failed = [];
   let exportString = '';
@@ -152,7 +146,7 @@ export interface IconProps extends SVGAttributes<SVGElement> {
 }
 export type Icon = FC<IconProps>;
 `;
-
+  console.log(`Processing ${numFiles} files...`);
   while (queue.length) {
     const file = queue.shift();
     try {
@@ -181,7 +175,10 @@ export type Icon = FC<IconProps>;
 
   await fs.writeFile(path.join(OUTPUT_DIR, 'index.js'), exportString);
   await fs.writeFile(path.join(OUTPUT_DIR, 'index.d.ts'), typeDefs);
-  console.log('failed', failed);
+  console.log(`Finished processing ${numFiles} files.`);
+  if (failed.length) {
+    console.log(`${failed.length} files failed:`, failed);
+  }
 };
 
 main();
