@@ -1,9 +1,9 @@
 # React Dripicons
-`react-dripicons` is a free SVG icon library, built for React. It is a port of the [Dripicons](http://demo.amitjakhu.com/dripicons/) icon pack by [Amit Jakhu](http://amitjakhu.com/).
+`react-dripicons` is a free SVG icon library, built for React. It is a port of the [Dripicons V2](http://demo.amitjakhu.com/dripicons/) icon pack made by [Amit Jakhu](http://amitjakhu.com/) and licensed under the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
 Inspired by the popular [react-feather](https://github.com/feathericons/react-feather) library.
 
-### Installation
+## Installation
 
 **npm**
 
@@ -14,7 +14,7 @@ Inspired by the popular [react-feather](https://github.com/feathericons/react-fe
     yarn add react-dripicons
 
 
-### Usage
+## Usage
 
 ```js
 import { Document } from 'react-dripicons';
