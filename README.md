@@ -43,3 +43,8 @@ const MyComponent = () => (
   <Icons.Document />
 );
 ```
+
+If your project does not support ES6 imports, use the `dist` folder:
+```js
+var Document = require('react-dripicons/dist/icons/document').default;
+```
