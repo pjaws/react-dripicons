@@ -17,8 +17,11 @@
   "engines": {
     "node": ">=14.15.0"
   },
+  "files": [
+    "dist"
+  ],
   "author": "Paul Jaworski",
-  "license": "CC BY 4.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pjaws/react-dripicons.git"
