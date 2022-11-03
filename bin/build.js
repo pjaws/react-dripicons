@@ -1,9 +1,9 @@
 /* eslint-disable no-await-in-loop */
-import fs from 'fs-extra';
-import path from 'path';
-import { globby } from 'globby';
+const fs = require('fs-extra');
+const path = require('path');
+const globby = require('globby');
 
-const ICONS_PATH = '/Users/paul/Downloads/Dripicons';
+const ICONS_PATH = path.join(process.cwd(), 'node_modules', 'dripicons', 'SVG');
 const OUTPUT_DIR = path.join(process.cwd(), 'src', 'icons');
 
 const clearAndUpper = (text) => text.replace(/-/, '').toUpperCase();
@@ -17,6 +17,15 @@ const kebabToCamel = (text) => {
   if (!text) return null;
   return text.replace(/-\w/g, clearAndUpper);
 };
+
+const initialTypeDefinitions = `/// <reference types="react" />
+import { FC, SVGAttributes } from 'react';
+export interface IconProps extends SVGAttributes<SVGElement> {
+  color?: string;
+  size?: string | number;
+}
+export type Icon = FC<IconProps>;
+`;
 
 const generateComponentName = (file) => kebabToPascal(file.replace('.svg', ''));
 
@@ -88,14 +97,61 @@ const writeStory = async (fileName, data) => {
   await fs.writeFile(path.join(OUTPUT_DIR, `${fileName}.stories.js`), data);
 };
 
+const generateTest = (componentName, fileName) => {
+  const template = `
+    import ${componentName} from 'icons/${fileName}';
+    import { render } from 'utils/testUtils';
+
+    describe('< ${componentName} />', () => {
+      it('matches the snapshot', () => {
+        const { container } = render(< ${componentName} />);
+
+        expect(container).toMatchSnapshot();
+      });
+
+      it('sets the icon size', () => {
+        const { container } = render(< ${componentName} size={32} />);
+
+        expect(container).toMatchSnapshot();
+        expect(container.firstChild).toHaveAttribute('width', '32');
+        expect(container.firstChild).toHaveAttribute('height', '32');
+      });
+
+      it('sets the icon color', () => {
+        const { container } = render(< ${componentName} color="#000" />);
+
+        expect(container).toMatchSnapshot();
+        expect(container.firstChild).toHaveAttribute('fill', '#000');
+      });
+    });
+  `;
+
+  return template;
+};
+
+const writeTest = async (fileName, data) => {
+  await fs.writeFile(path.join(OUTPUT_DIR, `${fileName}.spec.js`), data);
+};
+
 const generateExportString = (componentName, fileName) =>
   `export { default as ${componentName} } from './icons/${fileName}';\n`;
 
+const generateTypeDef = (componentName) => `export const ${componentName}: Icon;`;
+
 const main = async () => {
+  await fs.ensureDir(OUTPUT_DIR);
   const files = await globby('*.svg', { cwd: ICONS_PATH });
   const queue = [...files].sort();
   const failed = [];
   let exportString = '';
+  let typeDefs = `/// <reference types="react" />
+import { FC, SVGAttributes } from 'react';
+export interface IconProps extends SVGAttributes<SVGElement> {
+  color?: string;
+  size?: string | number;
+}
+export type Icon = FC<IconProps>;
+`;
 
   while (queue.length) {
     const file = queue.shift();
@@ -112,7 +168,11 @@ const main = async () => {
       const story = generateStory(componentName, fileName);
       await writeStory(fileName, story);
 
+      const test = generateTest(componentName, fileName);
+      await writeTest(fileName, test);
+
       exportString += generateExportString(componentName, fileName);
+      typeDefs += generateTypeDef(componentName);
     } catch (err) {
       console.error(err);
       failed.push(file);
@@ -120,6 +180,7 @@ const main = async () => {
   }
 
   await fs.writeFile(path.join(OUTPUT_DIR, 'index.js'), exportString);
+  await fs.writeFile(path.join(OUTPUT_DIR, 'index.d.ts'), typeDefs);
   console.log('failed', failed);
 };
 
