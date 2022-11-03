@@ -1,7 +1,7 @@
 {
   "name": "react-dripicons",
   "version": "1.0.0",
-  "description": "",
+  "description": "React components for Dripicons",
   "main": "build/index.js",
   "module": "dist/index.js",
   "sideEffects": false,
@@ -10,7 +10,7 @@
     "test": "jest --maxWorkers=50%",
     "compile": "rm -rf src/icons && node bin/build.js",
     "build:bundle": "rm -rf build && rollup --config rollup.config.js",
-    "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
+    "build:es": "rm -rf dist && babel src --out-dir dist --ignore \"src/**/*.spec.js\",\"src/**/*.stories.js\" --copy-files --no-copy-ignored",
     "build": "concurrently \"npm:build:*\"",
     "prepare": "husky install"
   },
@@ -27,6 +27,12 @@
     "url": "https://github.com/pjaws/react-dripicons/issues"
   },
   "homepage": "https://github.com/pjaws/react-dripicons#readme",
+  "keywords": [
+    "react",
+    "icons",
+    "svg",
+    "dripicons"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.18.9",
