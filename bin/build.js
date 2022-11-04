@@ -1,7 +1,6 @@
-/* eslint-disable no-await-in-loop */
-const fs = require('fs-extra');
+/* eslint-disable no-await-in-loop, import/no-extraneous-dependencies */
 const path = require('path');
-// eslint-disable-next-line import/no-extraneous-dependencies
+const fs = require('fs-extra');
 const globby = require('globby');
 
 const ICONS_PATH = path.join(process.cwd(), 'node_modules', 'dripicons', 'SVG');
