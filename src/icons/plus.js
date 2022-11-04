@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Plus = forwardRef(({ color, size, ...props }, ref) => (
+const Plus = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Plus.displayName = 'Plus';
 Plus.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Plus.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Plus;

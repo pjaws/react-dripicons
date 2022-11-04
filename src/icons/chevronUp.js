@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ChevronUp = forwardRef(({ color, size, ...props }, ref) => (
+const ChevronUp = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ ChevronUp.displayName = 'ChevronUp';
 ChevronUp.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-ChevronUp.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default ChevronUp;

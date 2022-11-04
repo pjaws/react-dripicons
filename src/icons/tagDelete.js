@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const TagDelete = forwardRef(({ color, size, ...props }, ref) => (
+const TagDelete = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ TagDelete.displayName = 'TagDelete';
 TagDelete.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-TagDelete.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default TagDelete;

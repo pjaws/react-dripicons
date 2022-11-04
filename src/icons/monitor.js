@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Monitor = forwardRef(({ color, size, ...props }, ref) => (
+const Monitor = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Monitor.displayName = 'Monitor';
 Monitor.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Monitor.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Monitor;

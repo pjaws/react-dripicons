@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Copy = forwardRef(({ color, size, ...props }, ref) => (
+const Copy = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Copy.displayName = 'Copy';
 Copy.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Copy.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Copy;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Pulse = forwardRef(({ color, size, ...props }, ref) => (
+const Pulse = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Pulse.displayName = 'Pulse';
 Pulse.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Pulse.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Pulse;

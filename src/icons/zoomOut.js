@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ZoomOut = forwardRef(({ color, size, ...props }, ref) => (
+const ZoomOut = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ ZoomOut.displayName = 'ZoomOut';
 ZoomOut.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-ZoomOut.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default ZoomOut;

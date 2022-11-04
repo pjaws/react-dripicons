@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Pencil = forwardRef(({ color, size, ...props }, ref) => (
+const Pencil = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Pencil.displayName = 'Pencil';
 Pencil.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Pencil.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Pencil;

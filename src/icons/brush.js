@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Brush = forwardRef(({ color, size, ...props }, ref) => (
+const Brush = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Brush.displayName = 'Brush';
 Brush.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Brush.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Brush;

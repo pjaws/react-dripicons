@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Time = forwardRef(({ color, size, ...props }, ref) => (
+const Time = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Time.displayName = 'Time';
 Time.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Time.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Time;

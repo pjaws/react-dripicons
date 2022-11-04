@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const BatteryLow = forwardRef(({ color, size, ...props }, ref) => (
+const BatteryLow = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ BatteryLow.displayName = 'BatteryLow';
 BatteryLow.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-BatteryLow.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default BatteryLow;

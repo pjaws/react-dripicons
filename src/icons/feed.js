@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Feed = forwardRef(({ color, size, ...props }, ref) => (
+const Feed = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Feed.displayName = 'Feed';
 Feed.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Feed.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Feed;

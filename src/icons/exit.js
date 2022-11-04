@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Exit = forwardRef(({ color, size, ...props }, ref) => (
+const Exit = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Exit.displayName = 'Exit';
 Exit.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Exit.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Exit;

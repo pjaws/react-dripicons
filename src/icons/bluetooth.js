@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Bluetooth = forwardRef(({ color, size, ...props }, ref) => (
+const Bluetooth = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Bluetooth.displayName = 'Bluetooth';
 Bluetooth.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Bluetooth.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Bluetooth;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MediaRecord = forwardRef(({ color, size, ...props }, ref) => (
+const MediaRecord = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ MediaRecord.displayName = 'MediaRecord';
 MediaRecord.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-MediaRecord.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default MediaRecord;

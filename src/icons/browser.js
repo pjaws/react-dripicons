@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Browser = forwardRef(({ color, size, ...props }, ref) => (
+const Browser = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Browser.displayName = 'Browser';
 Browser.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Browser.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Browser;

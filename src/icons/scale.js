@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Scale = forwardRef(({ color, size, ...props }, ref) => (
+const Scale = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Scale.displayName = 'Scale';
 Scale.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Scale.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Scale;

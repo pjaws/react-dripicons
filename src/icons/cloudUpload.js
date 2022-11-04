@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CloudUpload = forwardRef(({ color, size, ...props }, ref) => (
+const CloudUpload = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ CloudUpload.displayName = 'CloudUpload';
 CloudUpload.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-CloudUpload.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default CloudUpload;

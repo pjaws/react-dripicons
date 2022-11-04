@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const AlignCenter = forwardRef(({ color, size, ...props }, ref) => (
+const AlignCenter = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ AlignCenter.displayName = 'AlignCenter';
 AlignCenter.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-AlignCenter.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default AlignCenter;

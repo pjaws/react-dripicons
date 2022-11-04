@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Clipboard = forwardRef(({ color, size, ...props }, ref) => (
+const Clipboard = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Clipboard.displayName = 'Clipboard';
 Clipboard.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Clipboard.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Clipboard;

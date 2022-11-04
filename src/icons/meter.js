@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Meter = forwardRef(({ color, size, ...props }, ref) => (
+const Meter = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Meter.displayName = 'Meter';
 Meter.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Meter.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Meter;

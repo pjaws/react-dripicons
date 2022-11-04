@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const GraphPie = forwardRef(({ color, size, ...props }, ref) => (
+const GraphPie = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ GraphPie.displayName = 'GraphPie';
 GraphPie.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-GraphPie.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default GraphPie;

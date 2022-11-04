@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Todo = forwardRef(({ color, size, ...props }, ref) => (
+const Todo = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Todo.displayName = 'Todo';
 Todo.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Todo.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Todo;

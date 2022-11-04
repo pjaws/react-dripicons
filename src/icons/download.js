@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Download = forwardRef(({ color, size, ...props }, ref) => (
+const Download = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Download.displayName = 'Download';
 Download.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Download.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Download;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Help = forwardRef(({ color, size, ...props }, ref) => (
+const Help = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Help.displayName = 'Help';
 Help.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Help.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Help;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Ticket = forwardRef(({ color, size, ...props }, ref) => (
+const Ticket = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Ticket.displayName = 'Ticket';
 Ticket.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Ticket.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Ticket;

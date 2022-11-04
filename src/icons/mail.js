@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Mail = forwardRef(({ color, size, ...props }, ref) => (
+const Mail = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Mail.displayName = 'Mail';
 Mail.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Mail.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Mail;

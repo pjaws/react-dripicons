@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Enter = forwardRef(({ color, size, ...props }, ref) => (
+const Enter = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Enter.displayName = 'Enter';
 Enter.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Enter.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Enter;

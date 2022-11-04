@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ViewThumb = forwardRef(({ color, size, ...props }, ref) => (
+const ViewThumb = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ ViewThumb.displayName = 'ViewThumb';
 ViewThumb.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-ViewThumb.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default ViewThumb;

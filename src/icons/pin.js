@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Pin = forwardRef(({ color, size, ...props }, ref) => (
+const Pin = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Pin.displayName = 'Pin';
 Pin.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Pin.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Pin;

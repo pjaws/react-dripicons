@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Message = forwardRef(({ color, size, ...props }, ref) => (
+const Message = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Message.displayName = 'Message';
 Message.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Message.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Message;

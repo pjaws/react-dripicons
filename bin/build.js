@@ -28,7 +28,7 @@ const generateReactComponent = (componentName, svgPath) => {
     import { forwardRef } from 'react';
     import PropTypes from 'prop-types';
 
-    const ${componentName} = forwardRef(({ color, size, ...props }, ref) => (
+    const ${componentName} = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
       <svg
         ref={ref}
         width={size}
@@ -47,11 +47,6 @@ const generateReactComponent = (componentName, svgPath) => {
     ${componentName}.propTypes = {
       color: PropTypes.string,
       size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    };
-
-    ${componentName}.defaultProps = {
-      color: 'currentColor',
-      size: 24,
     };
 
     export default ${componentName};

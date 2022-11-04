@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Skip = forwardRef(({ color, size, ...props }, ref) => (
+const Skip = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Skip.displayName = 'Skip';
 Skip.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Skip.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Skip;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Search = forwardRef(({ color, size, ...props }, ref) => (
+const Search = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Search.displayName = 'Search';
 Search.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Search.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Search;

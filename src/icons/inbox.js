@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Inbox = forwardRef(({ color, size, ...props }, ref) => (
+const Inbox = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Inbox.displayName = 'Inbox';
 Inbox.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Inbox.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Inbox;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Forward = forwardRef(({ color, size, ...props }, ref) => (
+const Forward = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Forward.displayName = 'Forward';
 Forward.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Forward.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Forward;

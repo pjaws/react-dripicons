@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Direction = forwardRef(({ color, size, ...props }, ref) => (
+const Direction = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Direction.displayName = 'Direction';
 Direction.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Direction.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Direction;

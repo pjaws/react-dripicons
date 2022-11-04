@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Menu = forwardRef(({ color, size, ...props }, ref) => (
+const Menu = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Menu.displayName = 'Menu';
 Menu.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Menu.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Menu;

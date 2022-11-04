@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const UserGroup = forwardRef(({ color, size, ...props }, ref) => (
+const UserGroup = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ UserGroup.displayName = 'UserGroup';
 UserGroup.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-UserGroup.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default UserGroup;

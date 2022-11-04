@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const FolderOpen = forwardRef(({ color, size, ...props }, ref) => (
+const FolderOpen = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ FolderOpen.displayName = 'FolderOpen';
 FolderOpen.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-FolderOpen.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default FolderOpen;

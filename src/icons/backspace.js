@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Backspace = forwardRef(({ color, size, ...props }, ref) => (
+const Backspace = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Backspace.displayName = 'Backspace';
 Backspace.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Backspace.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Backspace;

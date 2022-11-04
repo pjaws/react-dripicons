@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MediaPause = forwardRef(({ color, size, ...props }, ref) => (
+const MediaPause = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ MediaPause.displayName = 'MediaPause';
 MediaPause.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-MediaPause.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default MediaPause;

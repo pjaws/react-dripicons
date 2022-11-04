@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Upload = forwardRef(({ color, size, ...props }, ref) => (
+const Upload = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Upload.displayName = 'Upload';
 Upload.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Upload.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Upload;

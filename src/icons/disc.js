@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Disc = forwardRef(({ color, size, ...props }, ref) => (
+const Disc = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Disc.displayName = 'Disc';
 Disc.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Disc.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Disc;

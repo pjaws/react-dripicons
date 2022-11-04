@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Network3 = forwardRef(({ color, size, ...props }, ref) => (
+const Network3 = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Network3.displayName = 'Network3';
 Network3.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Network3.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Network3;

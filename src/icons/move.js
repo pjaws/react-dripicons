@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Move = forwardRef(({ color, size, ...props }, ref) => (
+const Move = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Move.displayName = 'Move';
 Move.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Move.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Move;

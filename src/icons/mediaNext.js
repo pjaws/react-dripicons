@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MediaNext = forwardRef(({ color, size, ...props }, ref) => (
+const MediaNext = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ MediaNext.displayName = 'MediaNext';
 MediaNext.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-MediaNext.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default MediaNext;

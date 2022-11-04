@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ShoppingBag = forwardRef(({ color, size, ...props }, ref) => (
+const ShoppingBag = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ ShoppingBag.displayName = 'ShoppingBag';
 ShoppingBag.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-ShoppingBag.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default ShoppingBag;

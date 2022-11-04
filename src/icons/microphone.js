@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Microphone = forwardRef(({ color, size, ...props }, ref) => (
+const Microphone = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Microphone.displayName = 'Microphone';
 Microphone.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Microphone.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Microphone;

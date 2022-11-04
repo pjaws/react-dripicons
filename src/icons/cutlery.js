@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Cutlery = forwardRef(({ color, size, ...props }, ref) => (
+const Cutlery = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Cutlery.displayName = 'Cutlery';
 Cutlery.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Cutlery.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Cutlery;

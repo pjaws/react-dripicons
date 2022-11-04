@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ZoomIn = forwardRef(({ color, size, ...props }, ref) => (
+const ZoomIn = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ ZoomIn.displayName = 'ZoomIn';
 ZoomIn.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-ZoomIn.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default ZoomIn;

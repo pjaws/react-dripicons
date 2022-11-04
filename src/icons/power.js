@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Power = forwardRef(({ color, size, ...props }, ref) => (
+const Power = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Power.displayName = 'Power';
 Power.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Power.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Power;

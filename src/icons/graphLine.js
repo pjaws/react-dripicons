@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const GraphLine = forwardRef(({ color, size, ...props }, ref) => (
+const GraphLine = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ GraphLine.displayName = 'GraphLine';
 GraphLine.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-GraphLine.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default GraphLine;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Alarm = forwardRef(({ color, size, ...props }, ref) => (
+const Alarm = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Alarm.displayName = 'Alarm';
 Alarm.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Alarm.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Alarm;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Dot = forwardRef(({ color, size, ...props }, ref) => (
+const Dot = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Dot.displayName = 'Dot';
 Dot.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Dot.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Dot;

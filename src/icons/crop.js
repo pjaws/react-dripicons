@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Crop = forwardRef(({ color, size, ...props }, ref) => (
+const Crop = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Crop.displayName = 'Crop';
 Crop.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Crop.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Crop;

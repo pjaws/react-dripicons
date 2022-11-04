@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Anchor = forwardRef(({ color, size, ...props }, ref) => (
+const Anchor = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Anchor.displayName = 'Anchor';
 Anchor.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Anchor.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Anchor;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Print = forwardRef(({ color, size, ...props }, ref) => (
+const Print = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Print.displayName = 'Print';
 Print.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Print.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Print;

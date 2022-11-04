@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const VolumeLow = forwardRef(({ color, size, ...props }, ref) => (
+const VolumeLow = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ VolumeLow.displayName = 'VolumeLow';
 VolumeLow.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-VolumeLow.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default VolumeLow;

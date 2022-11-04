@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ArrowRight = forwardRef(({ color, size, ...props }, ref) => (
+const ArrowRight = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ ArrowRight.displayName = 'ArrowRight';
 ArrowRight.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-ArrowRight.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default ArrowRight;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Retweet = forwardRef(({ color, size, ...props }, ref) => (
+const Retweet = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Retweet.displayName = 'Retweet';
 Retweet.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Retweet.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Retweet;

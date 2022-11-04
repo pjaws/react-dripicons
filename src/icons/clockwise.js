@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Clockwise = forwardRef(({ color, size, ...props }, ref) => (
+const Clockwise = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Clockwise.displayName = 'Clockwise';
 Clockwise.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Clockwise.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Clockwise;

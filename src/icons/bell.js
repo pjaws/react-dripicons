@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Bell = forwardRef(({ color, size, ...props }, ref) => (
+const Bell = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Bell.displayName = 'Bell';
 Bell.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Bell.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Bell;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Hourglass = forwardRef(({ color, size, ...props }, ref) => (
+const Hourglass = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Hourglass.displayName = 'Hourglass';
 Hourglass.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Hourglass.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Hourglass;

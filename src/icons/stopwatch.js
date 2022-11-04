@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Stopwatch = forwardRef(({ color, size, ...props }, ref) => (
+const Stopwatch = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Stopwatch.displayName = 'Stopwatch';
 Stopwatch.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Stopwatch.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Stopwatch;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ReplyAll = forwardRef(({ color, size, ...props }, ref) => (
+const ReplyAll = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ ReplyAll.displayName = 'ReplyAll';
 ReplyAll.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-ReplyAll.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default ReplyAll;

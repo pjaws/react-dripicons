@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Expand2 = forwardRef(({ color, size, ...props }, ref) => (
+const Expand2 = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Expand2.displayName = 'Expand2';
 Expand2.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Expand2.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Expand2;

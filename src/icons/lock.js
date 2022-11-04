@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Lock = forwardRef(({ color, size, ...props }, ref) => (
+const Lock = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Lock.displayName = 'Lock';
 Lock.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Lock.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Lock;

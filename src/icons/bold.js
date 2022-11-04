@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Bold = forwardRef(({ color, size, ...props }, ref) => (
+const Bold = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Bold.displayName = 'Bold';
 Bold.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Bold.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Bold;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Swap = forwardRef(({ color, size, ...props }, ref) => (
+const Swap = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Swap.displayName = 'Swap';
 Swap.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Swap.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Swap;

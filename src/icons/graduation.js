@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Graduation = forwardRef(({ color, size, ...props }, ref) => (
+const Graduation = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Graduation.displayName = 'Graduation';
 Graduation.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Graduation.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Graduation;

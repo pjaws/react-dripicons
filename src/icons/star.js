@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Star = forwardRef(({ color, size, ...props }, ref) => (
+const Star = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Star.displayName = 'Star';
 Star.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Star.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Star;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Warning = forwardRef(({ color, size, ...props }, ref) => (
+const Warning = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Warning.displayName = 'Warning';
 Warning.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Warning.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Warning;

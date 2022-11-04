@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Location = forwardRef(({ color, size, ...props }, ref) => (
+const Location = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Location.displayName = 'Location';
 Location.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Location.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Location;

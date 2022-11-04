@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Contract2 = forwardRef(({ color, size, ...props }, ref) => (
+const Contract2 = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Contract2.displayName = 'Contract2';
 Contract2.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Contract2.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Contract2;

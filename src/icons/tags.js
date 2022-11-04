@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Tags = forwardRef(({ color, size, ...props }, ref) => (
+const Tags = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Tags.displayName = 'Tags';
 Tags.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Tags.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Tags;

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const AlignLeft = forwardRef(({ color, size, ...props }, ref) => (
+const AlignLeft = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ AlignLeft.displayName = 'AlignLeft';
 AlignLeft.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-AlignLeft.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default AlignLeft;

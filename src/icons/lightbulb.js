@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Lightbulb = forwardRef(({ color, size, ...props }, ref) => (
+const Lightbulb = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Lightbulb.displayName = 'Lightbulb';
 Lightbulb.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Lightbulb.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Lightbulb;

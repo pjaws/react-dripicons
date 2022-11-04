@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Trash = forwardRef(({ color, size, ...props }, ref) => (
+const Trash = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Trash.displayName = 'Trash';
 Trash.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Trash.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Trash;

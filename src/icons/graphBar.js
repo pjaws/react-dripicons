@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const GraphBar = forwardRef(({ color, size, ...props }, ref) => (
+const GraphBar = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ GraphBar.displayName = 'GraphBar';
 GraphBar.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-GraphBar.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default GraphBar;

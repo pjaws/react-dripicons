@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Broadcast = forwardRef(({ color, size, ...props }, ref) => (
+const Broadcast = forwardRef(({ color = 'currentColor', size = 24, ...props }, ref) => (
   <svg
     ref={ref}
     width={size}
@@ -20,11 +20,6 @@ Broadcast.displayName = 'Broadcast';
 Broadcast.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Broadcast.defaultProps = {
-  color: 'currentColor',
-  size: 24,
 };
 
 export default Broadcast;
