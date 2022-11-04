@@ -6,7 +6,7 @@ module.exports = {
     file: 'build/index.js',
     format: 'cjs',
   },
-  external: ['react', 'prop-types'],
+  external: ['react', 'prop-types', 'react/jsx-runtime'],
   plugins: [
     babel({
       exclude: 'node_modules/**',
