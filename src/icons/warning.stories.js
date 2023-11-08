@@ -1,11 +1,13 @@
-import Warning from 'icons/warning';
+import Warning from './warning';
 
 export default {
   title: 'Icons/Warning',
   component: Warning,
 };
 
-const Template = (args) => <Warning {...args} />;
+function Template(args) {
+  return <Warning {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

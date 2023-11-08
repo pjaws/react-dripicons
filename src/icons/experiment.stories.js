@@ -1,11 +1,13 @@
-import Experiment from 'icons/experiment';
+import Experiment from './experiment';
 
 export default {
   title: 'Icons/Experiment',
   component: Experiment,
 };
 
-const Template = (args) => <Experiment {...args} />;
+function Template(args) {
+  return <Experiment {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import DeviceDesktop from 'icons/deviceDesktop';
+import DeviceDesktop from './deviceDesktop';
 
 export default {
   title: 'Icons/DeviceDesktop',
   component: DeviceDesktop,
 };
 
-const Template = (args) => <DeviceDesktop {...args} />;
+function Template(args) {
+  return <DeviceDesktop {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import Gaming from 'icons/gaming';
+import Gaming from './gaming';
 
 export default {
   title: 'Icons/Gaming',
   component: Gaming,
 };
 
-const Template = (args) => <Gaming {...args} />;
+function Template(args) {
+  return <Gaming {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import Question from 'icons/question';
+import Question from './question';
 
 export default {
   title: 'Icons/Question',
   component: Question,
 };
 
-const Template = (args) => <Question {...args} />;
+function Template(args) {
+  return <Question {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

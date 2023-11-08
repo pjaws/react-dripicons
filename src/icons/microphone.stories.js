@@ -1,11 +1,13 @@
-import Microphone from 'icons/microphone';
+import Microphone from './microphone';
 
 export default {
   title: 'Icons/Microphone',
   component: Microphone,
 };
 
-const Template = (args) => <Microphone {...args} />;
+function Template(args) {
+  return <Microphone {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

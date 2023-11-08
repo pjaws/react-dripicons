@@ -1,11 +1,13 @@
-import Box from 'icons/box';
+import Box from './box';
 
 export default {
   title: 'Icons/Box',
   component: Box,
 };
 
-const Template = (args) => <Box {...args} />;
+function Template(args) {
+  return <Box {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

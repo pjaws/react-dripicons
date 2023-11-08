@@ -1,11 +1,13 @@
-import Mail from 'icons/mail';
+import Mail from './mail';
 
 export default {
   title: 'Icons/Mail',
   component: Mail,
 };
 
-const Template = (args) => <Mail {...args} />;
+function Template(args) {
+  return <Mail {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import DocumentEdit from 'icons/documentEdit';
+import DocumentEdit from './documentEdit';
 
 export default {
   title: 'Icons/DocumentEdit',
   component: DocumentEdit,
 };
 
-const Template = (args) => <DocumentEdit {...args} />;
+function Template(args) {
+  return <DocumentEdit {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import Paperclip from 'icons/paperclip';
+import Paperclip from './paperclip';
 
 export default {
   title: 'Icons/Paperclip',
   component: Paperclip,
 };
 
-const Template = (args) => <Paperclip {...args} />;
+function Template(args) {
+  return <Paperclip {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

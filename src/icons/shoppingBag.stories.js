@@ -1,11 +1,13 @@
-import ShoppingBag from 'icons/shoppingBag';
+import ShoppingBag from './shoppingBag';
 
 export default {
   title: 'Icons/ShoppingBag',
   component: ShoppingBag,
 };
 
-const Template = (args) => <ShoppingBag {...args} />;
+function Template(args) {
+  return <ShoppingBag {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

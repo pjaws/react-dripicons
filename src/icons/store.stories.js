@@ -1,11 +1,13 @@
-import Store from 'icons/store';
+import Store from './store';
 
 export default {
   title: 'Icons/Store',
   component: Store,
 };
 
-const Template = (args) => <Store {...args} />;
+function Template(args) {
+  return <Store {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

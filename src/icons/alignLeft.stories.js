@@ -1,11 +1,13 @@
-import AlignLeft from 'icons/alignLeft';
+import AlignLeft from './alignLeft';
 
 export default {
   title: 'Icons/AlignLeft',
   component: AlignLeft,
 };
 
-const Template = (args) => <AlignLeft {...args} />;
+function Template(args) {
+  return <AlignLeft {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

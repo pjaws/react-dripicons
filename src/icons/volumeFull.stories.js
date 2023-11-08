@@ -1,11 +1,13 @@
-import VolumeFull from 'icons/volumeFull';
+import VolumeFull from './volumeFull';
 
 export default {
   title: 'Icons/VolumeFull',
   component: VolumeFull,
 };
 
-const Template = (args) => <VolumeFull {...args} />;
+function Template(args) {
+  return <VolumeFull {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import Heart from 'icons/heart';
+import Heart from './heart';
 
 export default {
   title: 'Icons/Heart',
   component: Heart,
 };
 
-const Template = (args) => <Heart {...args} />;
+function Template(args) {
+  return <Heart {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

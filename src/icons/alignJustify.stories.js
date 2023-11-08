@@ -1,11 +1,13 @@
-import AlignJustify from 'icons/alignJustify';
+import AlignJustify from './alignJustify';
 
 export default {
   title: 'Icons/AlignJustify',
   component: AlignJustify,
 };
 
-const Template = (args) => <AlignJustify {...args} />;
+function Template(args) {
+  return <AlignJustify {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

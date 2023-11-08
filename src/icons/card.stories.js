@@ -1,11 +1,13 @@
-import Card from 'icons/card';
+import Card from './card';
 
 export default {
   title: 'Icons/Card',
   component: Card,
 };
 
-const Template = (args) => <Card {...args} />;
+function Template(args) {
+  return <Card {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

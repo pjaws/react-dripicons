@@ -1,11 +1,13 @@
-import GraphPie from 'icons/graphPie';
+import GraphPie from './graphPie';
 
 export default {
   title: 'Icons/GraphPie',
   component: GraphPie,
 };
 
-const Template = (args) => <GraphPie {...args} />;
+function Template(args) {
+  return <GraphPie {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

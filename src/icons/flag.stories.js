@@ -1,11 +1,13 @@
-import Flag from 'icons/flag';
+import Flag from './flag';
 
 export default {
   title: 'Icons/Flag',
   component: Flag,
 };
 
-const Template = (args) => <Flag {...args} />;
+function Template(args) {
+  return <Flag {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

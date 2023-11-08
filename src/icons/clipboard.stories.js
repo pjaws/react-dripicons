@@ -1,11 +1,13 @@
-import Clipboard from 'icons/clipboard';
+import Clipboard from './clipboard';
 
 export default {
   title: 'Icons/Clipboard',
   component: Clipboard,
 };
 
-const Template = (args) => <Clipboard {...args} />;
+function Template(args) {
+  return <Clipboard {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

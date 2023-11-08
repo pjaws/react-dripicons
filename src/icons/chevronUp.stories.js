@@ -1,11 +1,13 @@
-import ChevronUp from 'icons/chevronUp';
+import ChevronUp from './chevronUp';
 
 export default {
   title: 'Icons/ChevronUp',
   component: ChevronUp,
 };
 
-const Template = (args) => <ChevronUp {...args} />;
+function Template(args) {
+  return <ChevronUp {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

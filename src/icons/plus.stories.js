@@ -1,11 +1,13 @@
-import Plus from 'icons/plus';
+import Plus from './plus';
 
 export default {
   title: 'Icons/Plus',
   component: Plus,
 };
 
-const Template = (args) => <Plus {...args} />;
+function Template(args) {
+  return <Plus {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

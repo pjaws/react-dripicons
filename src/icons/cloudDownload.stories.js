@@ -1,11 +1,13 @@
-import CloudDownload from 'icons/cloudDownload';
+import CloudDownload from './cloudDownload';
 
 export default {
   title: 'Icons/CloudDownload',
   component: CloudDownload,
 };
 
-const Template = (args) => <CloudDownload {...args} />;
+function Template(args) {
+  return <CloudDownload {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

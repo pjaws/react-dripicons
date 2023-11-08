@@ -1,11 +1,13 @@
-import Tag from 'icons/tag';
+import Tag from './tag';
 
 export default {
   title: 'Icons/Tag',
   component: Tag,
 };
 
-const Template = (args) => <Tag {...args} />;
+function Template(args) {
+  return <Tag {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

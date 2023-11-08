@@ -1,11 +1,13 @@
-import LockOpen from 'icons/lockOpen';
+import LockOpen from './lockOpen';
 
 export default {
   title: 'Icons/LockOpen',
   component: LockOpen,
 };
 
-const Template = (args) => <LockOpen {...args} />;
+function Template(args) {
+  return <LockOpen {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

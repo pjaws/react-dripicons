@@ -1,11 +1,13 @@
-import Skip from 'icons/skip';
+import Skip from './skip';
 
 export default {
   title: 'Icons/Skip',
   component: Skip,
 };
 
-const Template = (args) => <Skip {...args} />;
+function Template(args) {
+  return <Skip {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

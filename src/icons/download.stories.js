@@ -1,11 +1,13 @@
-import Download from 'icons/download';
+import Download from './download';
 
 export default {
   title: 'Icons/Download',
   component: Download,
 };
 
-const Template = (args) => <Download {...args} />;
+function Template(args) {
+  return <Download {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

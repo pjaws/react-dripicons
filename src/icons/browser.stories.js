@@ -1,11 +1,13 @@
-import Browser from 'icons/browser';
+import Browser from './browser';
 
 export default {
   title: 'Icons/Browser',
   component: Browser,
 };
 
-const Template = (args) => <Browser {...args} />;
+function Template(args) {
+  return <Browser {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

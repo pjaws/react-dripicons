@@ -1,11 +1,13 @@
-import DeviceTablet from 'icons/deviceTablet';
+import DeviceTablet from './deviceTablet';
 
 export default {
   title: 'Icons/DeviceTablet',
   component: DeviceTablet,
 };
 
-const Template = (args) => <DeviceTablet {...args} />;
+function Template(args) {
+  return <DeviceTablet {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

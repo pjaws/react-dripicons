@@ -1,11 +1,13 @@
-import User from 'icons/user';
+import User from './user';
 
 export default {
   title: 'Icons/User',
   component: User,
 };
 
-const Template = (args) => <User {...args} />;
+function Template(args) {
+  return <User {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

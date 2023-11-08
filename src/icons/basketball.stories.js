@@ -1,11 +1,13 @@
-import Basketball from 'icons/basketball';
+import Basketball from './basketball';
 
 export default {
   title: 'Icons/Basketball',
   component: Basketball,
 };
 
-const Template = (args) => <Basketball {...args} />;
+function Template(args) {
+  return <Basketball {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

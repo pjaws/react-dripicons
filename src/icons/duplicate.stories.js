@@ -1,11 +1,13 @@
-import Duplicate from 'icons/duplicate';
+import Duplicate from './duplicate';
 
 export default {
   title: 'Icons/Duplicate',
   component: Duplicate,
 };
 
-const Template = (args) => <Duplicate {...args} />;
+function Template(args) {
+  return <Duplicate {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

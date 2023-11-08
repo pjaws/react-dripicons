@@ -1,11 +1,13 @@
-import Network5 from 'icons/network5';
+import Network5 from './network5';
 
 export default {
   title: 'Icons/Network5',
   component: Network5,
 };
 
-const Template = (args) => <Network5 {...args} />;
+function Template(args) {
+  return <Network5 {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

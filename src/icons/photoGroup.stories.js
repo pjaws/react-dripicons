@@ -1,11 +1,13 @@
-import PhotoGroup from 'icons/photoGroup';
+import PhotoGroup from './photoGroup';
 
 export default {
   title: 'Icons/PhotoGroup',
   component: PhotoGroup,
 };
 
-const Template = (args) => <PhotoGroup {...args} />;
+function Template(args) {
+  return <PhotoGroup {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

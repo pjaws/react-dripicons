@@ -1,11 +1,13 @@
-import ArrowUp from 'icons/arrowUp';
+import ArrowUp from './arrowUp';
 
 export default {
   title: 'Icons/ArrowUp',
   component: ArrowUp,
 };
 
-const Template = (args) => <ArrowUp {...args} />;
+function Template(args) {
+  return <ArrowUp {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

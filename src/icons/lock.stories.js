@@ -1,11 +1,13 @@
-import Lock from 'icons/lock';
+import Lock from './lock';
 
 export default {
   title: 'Icons/Lock',
   component: Lock,
 };
 
-const Template = (args) => <Lock {...args} />;
+function Template(args) {
+  return <Lock {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

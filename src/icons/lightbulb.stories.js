@@ -1,11 +1,13 @@
-import Lightbulb from 'icons/lightbulb';
+import Lightbulb from './lightbulb';
 
 export default {
   title: 'Icons/Lightbulb',
   component: Lightbulb,
 };
 
-const Template = (args) => <Lightbulb {...args} />;
+function Template(args) {
+  return <Lightbulb {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

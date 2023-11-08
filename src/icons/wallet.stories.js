@@ -1,11 +1,13 @@
-import Wallet from 'icons/wallet';
+import Wallet from './wallet';
 
 export default {
   title: 'Icons/Wallet',
   component: Wallet,
 };
 
-const Template = (args) => <Wallet {...args} />;
+function Template(args) {
+  return <Wallet {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

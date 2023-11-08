@@ -1,11 +1,13 @@
-import Inbox from 'icons/inbox';
+import Inbox from './inbox';
 
 export default {
   title: 'Icons/Inbox',
   component: Inbox,
 };
 
-const Template = (args) => <Inbox {...args} />;
+function Template(args) {
+  return <Inbox {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

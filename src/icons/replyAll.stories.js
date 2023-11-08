@@ -1,11 +1,13 @@
-import ReplyAll from 'icons/replyAll';
+import ReplyAll from './replyAll';
 
 export default {
   title: 'Icons/ReplyAll',
   component: ReplyAll,
 };
 
-const Template = (args) => <ReplyAll {...args} />;
+function Template(args) {
+  return <ReplyAll {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

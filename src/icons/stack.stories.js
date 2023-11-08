@@ -1,11 +1,13 @@
-import Stack from 'icons/stack';
+import Stack from './stack';
 
 export default {
   title: 'Icons/Stack',
   component: Stack,
 };
 
-const Template = (args) => <Stack {...args} />;
+function Template(args) {
+  return <Stack {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

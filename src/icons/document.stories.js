@@ -1,11 +1,13 @@
-import Document from 'icons/document';
+import Document from './document';
 
 export default {
   title: 'Icons/Document',
   component: Document,
 };
 
-const Template = (args) => <Document {...args} />;
+function Template(args) {
+  return <Document {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

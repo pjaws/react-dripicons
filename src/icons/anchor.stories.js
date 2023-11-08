@@ -1,11 +1,13 @@
-import Anchor from 'icons/anchor';
+import Anchor from './anchor';
 
 export default {
   title: 'Icons/Anchor',
   component: Anchor,
 };
 
-const Template = (args) => <Anchor {...args} />;
+function Template(args) {
+  return <Anchor {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

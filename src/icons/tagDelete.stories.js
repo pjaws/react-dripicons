@@ -1,11 +1,13 @@
-import TagDelete from 'icons/tagDelete';
+import TagDelete from './tagDelete';
 
 export default {
   title: 'Icons/TagDelete',
   component: TagDelete,
 };
 
-const Template = (args) => <TagDelete {...args} />;
+function Template(args) {
+  return <TagDelete {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

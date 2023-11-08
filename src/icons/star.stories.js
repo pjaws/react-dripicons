@@ -1,11 +1,13 @@
-import Star from 'icons/star';
+import Star from './star';
 
 export default {
   title: 'Icons/Star',
   component: Star,
 };
 
-const Template = (args) => <Star {...args} />;
+function Template(args) {
+  return <Star {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

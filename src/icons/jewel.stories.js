@@ -1,11 +1,13 @@
-import Jewel from 'icons/jewel';
+import Jewel from './jewel';
 
 export default {
   title: 'Icons/Jewel',
   component: Jewel,
 };
 
-const Template = (args) => <Jewel {...args} />;
+function Template(args) {
+  return <Jewel {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

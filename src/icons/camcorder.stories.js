@@ -1,11 +1,13 @@
-import Camcorder from 'icons/camcorder';
+import Camcorder from './camcorder';
 
 export default {
   title: 'Icons/Camcorder',
   component: Camcorder,
 };
 
-const Template = (args) => <Camcorder {...args} />;
+function Template(args) {
+  return <Camcorder {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

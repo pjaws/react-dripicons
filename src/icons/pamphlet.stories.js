@@ -1,11 +1,13 @@
-import Pamphlet from 'icons/pamphlet';
+import Pamphlet from './pamphlet';
 
 export default {
   title: 'Icons/Pamphlet',
   component: Pamphlet,
 };
 
-const Template = (args) => <Pamphlet {...args} />;
+function Template(args) {
+  return <Pamphlet {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

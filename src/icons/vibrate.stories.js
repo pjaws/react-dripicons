@@ -1,11 +1,13 @@
-import Vibrate from 'icons/vibrate';
+import Vibrate from './vibrate';
 
 export default {
   title: 'Icons/Vibrate',
   component: Vibrate,
 };
 
-const Template = (args) => <Vibrate {...args} />;
+function Template(args) {
+  return <Vibrate {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

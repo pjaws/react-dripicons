@@ -1,11 +1,13 @@
-import Broadcast from 'icons/broadcast';
+import Broadcast from './broadcast';
 
 export default {
   title: 'Icons/Broadcast',
   component: Broadcast,
 };
 
-const Template = (args) => <Broadcast {...args} />;
+function Template(args) {
+  return <Broadcast {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

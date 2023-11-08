@@ -1,11 +1,13 @@
-import Direction from 'icons/direction';
+import Direction from './direction';
 
 export default {
   title: 'Icons/Direction',
   component: Direction,
 };
 
-const Template = (args) => <Direction {...args} />;
+function Template(args) {
+  return <Direction {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

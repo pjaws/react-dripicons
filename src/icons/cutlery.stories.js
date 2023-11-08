@@ -1,11 +1,13 @@
-import Cutlery from 'icons/cutlery';
+import Cutlery from './cutlery';
 
 export default {
   title: 'Icons/Cutlery',
   component: Cutlery,
 };
 
-const Template = (args) => <Cutlery {...args} />;
+function Template(args) {
+  return <Cutlery {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

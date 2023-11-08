@@ -1,11 +1,13 @@
-import DocumentRemove from 'icons/documentRemove';
+import DocumentRemove from './documentRemove';
 
 export default {
   title: 'Icons/DocumentRemove',
   component: DocumentRemove,
 };
 
-const Template = (args) => <DocumentRemove {...args} />;
+function Template(args) {
+  return <DocumentRemove {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

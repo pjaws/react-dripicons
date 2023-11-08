@@ -1,11 +1,13 @@
-import Backspace from 'icons/backspace';
+import Backspace from './backspace';
 
 export default {
   title: 'Icons/Backspace',
   component: Backspace,
 };
 
-const Template = (args) => <Backspace {...args} />;
+function Template(args) {
+  return <Backspace {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

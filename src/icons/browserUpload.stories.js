@@ -1,11 +1,13 @@
-import BrowserUpload from 'icons/browserUpload';
+import BrowserUpload from './browserUpload';
 
 export default {
   title: 'Icons/BrowserUpload',
   component: BrowserUpload,
 };
 
-const Template = (args) => <BrowserUpload {...args} />;
+function Template(args) {
+  return <BrowserUpload {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

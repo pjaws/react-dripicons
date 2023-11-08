@@ -1,11 +1,13 @@
-import Italic from 'icons/italic';
+import Italic from './italic';
 
 export default {
   title: 'Icons/Italic',
   component: Italic,
 };
 
-const Template = (args) => <Italic {...args} />;
+function Template(args) {
+  return <Italic {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import ZoomIn from 'icons/zoomIn';
+import ZoomIn from './zoomIn';
 
 export default {
   title: 'Icons/ZoomIn',
   component: ZoomIn,
 };
 
-const Template = (args) => <ZoomIn {...args} />;
+function Template(args) {
+  return <ZoomIn {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

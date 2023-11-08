@@ -1,11 +1,13 @@
-import Archive from 'icons/archive';
+import Archive from './archive';
 
 export default {
   title: 'Icons/Archive',
   component: Archive,
 };
 
-const Template = (args) => <Archive {...args} />;
+function Template(args) {
+  return <Archive {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

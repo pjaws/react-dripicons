@@ -1,11 +1,13 @@
-import Todo from 'icons/todo';
+import Todo from './todo';
 
 export default {
   title: 'Icons/Todo',
   component: Todo,
 };
 
-const Template = (args) => <Todo {...args} />;
+function Template(args) {
+  return <Todo {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

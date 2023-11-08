@@ -1,11 +1,13 @@
-import Hourglass from 'icons/hourglass';
+import Hourglass from './hourglass';
 
 export default {
   title: 'Icons/Hourglass',
   component: Hourglass,
 };
 
-const Template = (args) => <Hourglass {...args} />;
+function Template(args) {
+  return <Hourglass {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

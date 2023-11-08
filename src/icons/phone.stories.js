@@ -1,11 +1,13 @@
-import Phone from 'icons/phone';
+import Phone from './phone';
 
 export default {
   title: 'Icons/Phone',
   component: Phone,
 };
 
-const Template = (args) => <Phone {...args} />;
+function Template(args) {
+  return <Phone {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

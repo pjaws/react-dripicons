@@ -1,11 +1,13 @@
-import VolumeMedium from 'icons/volumeMedium';
+import VolumeMedium from './volumeMedium';
 
 export default {
   title: 'Icons/VolumeMedium',
   component: VolumeMedium,
 };
 
-const Template = (args) => <VolumeMedium {...args} />;
+function Template(args) {
+  return <VolumeMedium {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

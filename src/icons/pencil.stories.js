@@ -1,11 +1,13 @@
-import Pencil from 'icons/pencil';
+import Pencil from './pencil';
 
 export default {
   title: 'Icons/Pencil',
   component: Pencil,
 };
 
-const Template = (args) => <Pencil {...args} />;
+function Template(args) {
+  return <Pencil {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import ThumbsDown from 'icons/thumbsDown';
+import ThumbsDown from './thumbsDown';
 
 export default {
   title: 'Icons/ThumbsDown',
   component: ThumbsDown,
 };
 
-const Template = (args) => <ThumbsDown {...args} />;
+function Template(args) {
+  return <ThumbsDown {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

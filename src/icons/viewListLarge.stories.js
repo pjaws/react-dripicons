@@ -1,11 +1,13 @@
-import ViewListLarge from 'icons/viewListLarge';
+import ViewListLarge from './viewListLarge';
 
 export default {
   title: 'Icons/ViewListLarge',
   component: ViewListLarge,
 };
 
-const Template = (args) => <ViewListLarge {...args} />;
+function Template(args) {
+  return <ViewListLarge {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

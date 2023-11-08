@@ -1,11 +1,13 @@
-import Gear from 'icons/gear';
+import Gear from './gear';
 
 export default {
   title: 'Icons/Gear',
   component: Gear,
 };
 
-const Template = (args) => <Gear {...args} />;
+function Template(args) {
+  return <Gear {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

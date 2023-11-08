@@ -1,11 +1,13 @@
-import List from 'icons/list';
+import List from './list';
 
 export default {
   title: 'Icons/List',
   component: List,
 };
 
-const Template = (args) => <List {...args} />;
+function Template(args) {
+  return <List {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

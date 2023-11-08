@@ -1,11 +1,13 @@
-import MediaLoop from 'icons/mediaLoop';
+import MediaLoop from './mediaLoop';
 
 export default {
   title: 'Icons/MediaLoop',
   component: MediaLoop,
 };
 
-const Template = (args) => <MediaLoop {...args} />;
+function Template(args) {
+  return <MediaLoop {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

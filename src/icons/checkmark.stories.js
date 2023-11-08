@@ -1,11 +1,13 @@
-import Checkmark from 'icons/checkmark';
+import Checkmark from './checkmark';
 
 export default {
   title: 'Icons/Checkmark',
   component: Checkmark,
 };
 
-const Template = (args) => <Checkmark {...args} />;
+function Template(args) {
+  return <Checkmark {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import AlignCenter from 'icons/alignCenter';
+import AlignCenter from './alignCenter';
 
 export default {
   title: 'Icons/AlignCenter',
   component: AlignCenter,
 };
 
-const Template = (args) => <AlignCenter {...args} />;
+function Template(args) {
+  return <AlignCenter {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

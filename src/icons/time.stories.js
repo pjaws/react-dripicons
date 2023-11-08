@@ -1,11 +1,13 @@
-import Time from 'icons/time';
+import Time from './time';
 
 export default {
   title: 'Icons/Time',
   component: Time,
 };
 
-const Template = (args) => <Time {...args} />;
+function Template(args) {
+  return <Time {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

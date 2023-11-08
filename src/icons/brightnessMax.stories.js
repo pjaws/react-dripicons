@@ -1,11 +1,13 @@
-import BrightnessMax from 'icons/brightnessMax';
+import BrightnessMax from './brightnessMax';
 
 export default {
   title: 'Icons/BrightnessMax',
   component: BrightnessMax,
 };
 
-const Template = (args) => <BrightnessMax {...args} />;
+function Template(args) {
+  return <BrightnessMax {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

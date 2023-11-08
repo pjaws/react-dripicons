@@ -1,11 +1,13 @@
-import Bell from 'icons/bell';
+import Bell from './bell';
 
 export default {
   title: 'Icons/Bell',
   component: Bell,
 };
 
-const Template = (args) => <Bell {...args} />;
+function Template(args) {
+  return <Bell {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

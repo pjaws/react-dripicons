@@ -1,11 +1,13 @@
-import ArrowThinRight from 'icons/arrowThinRight';
+import ArrowThinRight from './arrowThinRight';
 
 export default {
   title: 'Icons/ArrowThinRight',
   component: ArrowThinRight,
 };
 
-const Template = (args) => <ArrowThinRight {...args} />;
+function Template(args) {
+  return <ArrowThinRight {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

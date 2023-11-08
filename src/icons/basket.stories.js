@@ -1,11 +1,13 @@
-import Basket from 'icons/basket';
+import Basket from './basket';
 
 export default {
   title: 'Icons/Basket',
   component: Basket,
 };
 
-const Template = (args) => <Basket {...args} />;
+function Template(args) {
+  return <Basket {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

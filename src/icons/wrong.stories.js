@@ -1,11 +1,13 @@
-import Wrong from 'icons/wrong';
+import Wrong from './wrong';
 
 export default {
   title: 'Icons/Wrong',
   component: Wrong,
 };
 
-const Template = (args) => <Wrong {...args} />;
+function Template(args) {
+  return <Wrong {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

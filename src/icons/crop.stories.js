@@ -1,11 +1,13 @@
-import Crop from 'icons/crop';
+import Crop from './crop';
 
 export default {
   title: 'Icons/Crop',
   component: Crop,
 };
 
-const Template = (args) => <Crop {...args} />;
+function Template(args) {
+  return <Crop {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

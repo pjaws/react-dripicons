@@ -1,11 +1,13 @@
-import DocumentDelete from 'icons/documentDelete';
+import DocumentDelete from './documentDelete';
 
 export default {
   title: 'Icons/DocumentDelete',
   component: DocumentDelete,
 };
 
-const Template = (args) => <DocumentDelete {...args} />;
+function Template(args) {
+  return <DocumentDelete {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

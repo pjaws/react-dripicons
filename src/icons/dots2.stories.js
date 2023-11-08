@@ -1,11 +1,13 @@
-import Dots2 from 'icons/dots2';
+import Dots2 from './dots2';
 
 export default {
   title: 'Icons/Dots2',
   component: Dots2,
 };
 
-const Template = (args) => <Dots2 {...args} />;
+function Template(args) {
+  return <Dots2 {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

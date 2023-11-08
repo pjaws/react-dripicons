@@ -1,11 +1,13 @@
-import LinkBroken from 'icons/linkBroken';
+import LinkBroken from './linkBroken';
 
 export default {
   title: 'Icons/LinkBroken',
   component: LinkBroken,
 };
 
-const Template = (args) => <LinkBroken {...args} />;
+function Template(args) {
+  return <LinkBroken {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

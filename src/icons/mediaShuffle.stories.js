@@ -1,11 +1,13 @@
-import MediaShuffle from 'icons/mediaShuffle';
+import MediaShuffle from './mediaShuffle';
 
 export default {
   title: 'Icons/MediaShuffle',
   component: MediaShuffle,
 };
 
-const Template = (args) => <MediaShuffle {...args} />;
+function Template(args) {
+  return <MediaShuffle {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

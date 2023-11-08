@@ -1,11 +1,13 @@
-import BatteryLow from 'icons/batteryLow';
+import BatteryLow from './batteryLow';
 
 export default {
   title: 'Icons/BatteryLow',
   component: BatteryLow,
 };
 
-const Template = (args) => <BatteryLow {...args} />;
+function Template(args) {
+  return <BatteryLow {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

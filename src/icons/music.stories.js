@@ -1,11 +1,13 @@
-import Music from 'icons/music';
+import Music from './music';
 
 export default {
   title: 'Icons/Music',
   component: Music,
 };
 
-const Template = (args) => <Music {...args} />;
+function Template(args) {
+  return <Music {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

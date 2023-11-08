@@ -1,11 +1,13 @@
-import Contract2 from 'icons/contract2';
+import Contract2 from './contract2';
 
 export default {
   title: 'Icons/Contract2',
   component: Contract2,
 };
 
-const Template = (args) => <Contract2 {...args} />;
+function Template(args) {
+  return <Contract2 {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

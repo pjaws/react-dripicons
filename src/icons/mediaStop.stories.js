@@ -1,11 +1,13 @@
-import MediaStop from 'icons/mediaStop';
+import MediaStop from './mediaStop';
 
 export default {
   title: 'Icons/MediaStop',
   component: MediaStop,
 };
 
-const Template = (args) => <MediaStop {...args} />;
+function Template(args) {
+  return <MediaStop {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

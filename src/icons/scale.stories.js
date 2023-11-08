@@ -1,11 +1,13 @@
-import Scale from 'icons/scale';
+import Scale from './scale';
 
 export default {
   title: 'Icons/Scale',
   component: Scale,
 };
 
-const Template = (args) => <Scale {...args} />;
+function Template(args) {
+  return <Scale {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

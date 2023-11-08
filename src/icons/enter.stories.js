@@ -1,11 +1,13 @@
-import Enter from 'icons/enter';
+import Enter from './enter';
 
 export default {
   title: 'Icons/Enter',
   component: Enter,
 };
 
-const Template = (args) => <Enter {...args} />;
+function Template(args) {
+  return <Enter {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import Message from 'icons/message';
+import Message from './message';
 
 export default {
   title: 'Icons/Message',
   component: Message,
 };
 
-const Template = (args) => <Message {...args} />;
+function Template(args) {
+  return <Message {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

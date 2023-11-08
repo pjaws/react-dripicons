@@ -1,11 +1,13 @@
-import Toggles from 'icons/toggles';
+import Toggles from './toggles';
 
 export default {
   title: 'Icons/Toggles',
   component: Toggles,
 };
 
-const Template = (args) => <Toggles {...args} />;
+function Template(args) {
+  return <Toggles {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import Print from 'icons/print';
+import Print from './print';
 
 export default {
   title: 'Icons/Print',
   component: Print,
 };
 
-const Template = (args) => <Print {...args} />;
+function Template(args) {
+  return <Print {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

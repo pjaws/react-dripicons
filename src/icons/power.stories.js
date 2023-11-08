@@ -1,11 +1,13 @@
-import Power from 'icons/power';
+import Power from './power';
 
 export default {
   title: 'Icons/Power',
   component: Power,
 };
 
-const Template = (args) => <Power {...args} />;
+function Template(args) {
+  return <Power {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

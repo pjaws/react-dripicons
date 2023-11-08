@@ -1,11 +1,13 @@
-import Crosshair from 'icons/crosshair';
+import Crosshair from './crosshair';
 
 export default {
   title: 'Icons/Crosshair',
   component: Crosshair,
 };
 
-const Template = (args) => <Crosshair {...args} />;
+function Template(args) {
+  return <Crosshair {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import Bluetooth from 'icons/bluetooth';
+import Bluetooth from './bluetooth';
 
 export default {
   title: 'Icons/Bluetooth',
   component: Bluetooth,
 };
 
-const Template = (args) => <Bluetooth {...args} />;
+function Template(args) {
+  return <Bluetooth {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

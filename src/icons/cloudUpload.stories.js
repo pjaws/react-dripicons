@@ -1,11 +1,13 @@
-import CloudUpload from 'icons/cloudUpload';
+import CloudUpload from './cloudUpload';
 
 export default {
   title: 'Icons/CloudUpload',
   component: CloudUpload,
 };
 
-const Template = (args) => <CloudUpload {...args} />;
+function Template(args) {
+  return <CloudUpload {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

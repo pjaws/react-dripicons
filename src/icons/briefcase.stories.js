@@ -1,11 +1,13 @@
-import Briefcase from 'icons/briefcase';
+import Briefcase from './briefcase';
 
 export default {
   title: 'Icons/Briefcase',
   component: Briefcase,
 };
 
-const Template = (args) => <Briefcase {...args} />;
+function Template(args) {
+  return <Briefcase {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

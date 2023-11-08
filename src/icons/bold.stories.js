@@ -1,11 +1,13 @@
-import Bold from 'icons/bold';
+import Bold from './bold';
 
 export default {
   title: 'Icons/Bold',
   component: Bold,
 };
 
-const Template = (args) => <Bold {...args} />;
+function Template(args) {
+  return <Bold {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import Flashlight from 'icons/flashlight';
+import Flashlight from './flashlight';
 
 export default {
   title: 'Icons/Flashlight',
   component: Flashlight,
 };
 
-const Template = (args) => <Flashlight {...args} />;
+function Template(args) {
+  return <Flashlight {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

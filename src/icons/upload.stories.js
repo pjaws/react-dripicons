@@ -1,11 +1,13 @@
-import Upload from 'icons/upload';
+import Upload from './upload';
 
 export default {
   title: 'Icons/Upload',
   component: Upload,
 };
 
-const Template = (args) => <Upload {...args} />;
+function Template(args) {
+  return <Upload {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

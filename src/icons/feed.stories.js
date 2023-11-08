@@ -1,11 +1,13 @@
-import Feed from 'icons/feed';
+import Feed from './feed';
 
 export default {
   title: 'Icons/Feed',
   component: Feed,
 };
 
-const Template = (args) => <Feed {...args} />;
+function Template(args) {
+  return <Feed {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

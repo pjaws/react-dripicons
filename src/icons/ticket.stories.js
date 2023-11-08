@@ -1,11 +1,13 @@
-import Ticket from 'icons/ticket';
+import Ticket from './ticket';
 
 export default {
   title: 'Icons/Ticket',
   component: Ticket,
 };
 
-const Template = (args) => <Ticket {...args} />;
+function Template(args) {
+  return <Ticket {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

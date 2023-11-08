@@ -1,11 +1,13 @@
-import ThumbsUp from 'icons/thumbsUp';
+import ThumbsUp from './thumbsUp';
 
 export default {
   title: 'Icons/ThumbsUp',
   component: ThumbsUp,
 };
 
-const Template = (args) => <ThumbsUp {...args} />;
+function Template(args) {
+  return <ThumbsUp {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import Expand from 'icons/expand';
+import Expand from './expand';
 
 export default {
   title: 'Icons/Expand',
   component: Expand,
 };
 
-const Template = (args) => <Expand {...args} />;
+function Template(args) {
+  return <Expand {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

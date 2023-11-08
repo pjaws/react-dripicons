@@ -1,11 +1,13 @@
-import BrightnessMedium from 'icons/brightnessMedium';
+import BrightnessMedium from './brightnessMedium';
 
 export default {
   title: 'Icons/BrightnessMedium',
   component: BrightnessMedium,
 };
 
-const Template = (args) => <BrightnessMedium {...args} />;
+function Template(args) {
+  return <BrightnessMedium {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

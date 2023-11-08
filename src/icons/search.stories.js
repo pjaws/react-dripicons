@@ -1,11 +1,13 @@
-import Search from 'icons/search';
+import Search from './search';
 
 export default {
   title: 'Icons/Search',
   component: Search,
 };
 
-const Template = (args) => <Search {...args} />;
+function Template(args) {
+  return <Search {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

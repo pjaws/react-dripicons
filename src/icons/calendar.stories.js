@@ -1,11 +1,13 @@
-import Calendar from 'icons/calendar';
+import Calendar from './calendar';
 
 export default {
   title: 'Icons/Calendar',
   component: Calendar,
 };
 
-const Template = (args) => <Calendar {...args} />;
+function Template(args) {
+  return <Calendar {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

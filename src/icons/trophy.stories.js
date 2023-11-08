@@ -1,11 +1,13 @@
-import Trophy from 'icons/trophy';
+import Trophy from './trophy';
 
 export default {
   title: 'Icons/Trophy',
   component: Trophy,
 };
 
-const Template = (args) => <Trophy {...args} />;
+function Template(args) {
+  return <Trophy {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

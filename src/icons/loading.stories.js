@@ -1,11 +1,13 @@
-import Loading from 'icons/loading';
+import Loading from './loading';
 
 export default {
   title: 'Icons/Loading',
   component: Loading,
 };
 
-const Template = (args) => <Loading {...args} />;
+function Template(args) {
+  return <Loading {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

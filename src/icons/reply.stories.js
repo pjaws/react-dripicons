@@ -1,11 +1,13 @@
-import Reply from 'icons/reply';
+import Reply from './reply';
 
 export default {
   title: 'Icons/Reply',
   component: Reply,
 };
 
-const Template = (args) => <Reply {...args} />;
+function Template(args) {
+  return <Reply {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

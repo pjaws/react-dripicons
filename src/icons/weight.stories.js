@@ -1,11 +1,13 @@
-import Weight from 'icons/weight';
+import Weight from './weight';
 
 export default {
   title: 'Icons/Weight',
   component: Weight,
 };
 
-const Template = (args) => <Weight {...args} />;
+function Template(args) {
+  return <Weight {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

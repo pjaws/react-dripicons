@@ -1,11 +1,13 @@
-import Home from 'icons/home';
+import Home from './home';
 
 export default {
   title: 'Icons/Home',
   component: Home,
 };
 
-const Template = (args) => <Home {...args} />;
+function Template(args) {
+  return <Home {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

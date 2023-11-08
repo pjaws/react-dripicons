@@ -1,11 +1,13 @@
-import ChevronDown from 'icons/chevronDown';
+import ChevronDown from './chevronDown';
 
 export default {
   title: 'Icons/ChevronDown',
   component: ChevronDown,
 };
 
-const Template = (args) => <ChevronDown {...args} />;
+function Template(args) {
+  return <ChevronDown {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import Cross from 'icons/cross';
+import Cross from './cross';
 
 export default {
   title: 'Icons/Cross',
   component: Cross,
 };
 
-const Template = (args) => <Cross {...args} />;
+function Template(args) {
+  return <Cross {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

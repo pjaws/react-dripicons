@@ -1,11 +1,13 @@
-import Map from 'icons/map';
+import Map from './map';
 
 export default {
   title: 'Icons/Map',
   component: Map,
 };
 
-const Template = (args) => <Map {...args} />;
+function Template(args) {
+  return <Map {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

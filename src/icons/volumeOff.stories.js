@@ -1,11 +1,13 @@
-import VolumeOff from 'icons/volumeOff';
+import VolumeOff from './volumeOff';
 
 export default {
   title: 'Icons/VolumeOff',
   component: VolumeOff,
 };
 
-const Template = (args) => <VolumeOff {...args} />;
+function Template(args) {
+  return <VolumeOff {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

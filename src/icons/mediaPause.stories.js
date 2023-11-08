@@ -1,11 +1,13 @@
-import MediaPause from 'icons/mediaPause';
+import MediaPause from './mediaPause';
 
 export default {
   title: 'Icons/MediaPause',
   component: MediaPause,
 };
 
-const Template = (args) => <MediaPause {...args} />;
+function Template(args) {
+  return <MediaPause {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

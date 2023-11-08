@@ -1,11 +1,13 @@
-import Wifi from 'icons/wifi';
+import Wifi from './wifi';
 
 export default {
   title: 'Icons/Wifi',
   component: Wifi,
 };
 
-const Template = (args) => <Wifi {...args} />;
+function Template(args) {
+  return <Wifi {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

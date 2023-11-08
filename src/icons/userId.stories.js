@@ -1,11 +1,13 @@
-import UserId from 'icons/userId';
+import UserId from './userId';
 
 export default {
   title: 'Icons/UserId',
   component: UserId,
 };
 
-const Template = (args) => <UserId {...args} />;
+function Template(args) {
+  return <UserId {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

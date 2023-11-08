@@ -1,11 +1,13 @@
-import Disc from 'icons/disc';
+import Disc from './disc';
 
 export default {
   title: 'Icons/Disc',
   component: Disc,
 };
 
-const Template = (args) => <Disc {...args} />;
+function Template(args) {
+  return <Disc {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

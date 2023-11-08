@@ -1,11 +1,13 @@
-import FolderOpen from 'icons/folderOpen';
+import FolderOpen from './folderOpen';
 
 export default {
   title: 'Icons/FolderOpen',
   component: FolderOpen,
 };
 
-const Template = (args) => <FolderOpen {...args} />;
+function Template(args) {
+  return <FolderOpen {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

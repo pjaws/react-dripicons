@@ -1,11 +1,13 @@
-import Rocket from 'icons/rocket';
+import Rocket from './rocket';
 
 export default {
   title: 'Icons/Rocket',
   component: Rocket,
 };
 
-const Template = (args) => <Rocket {...args} />;
+function Template(args) {
+  return <Rocket {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import ArrowThinDown from 'icons/arrowThinDown';
+import ArrowThinDown from './arrowThinDown';
 
 export default {
   title: 'Icons/ArrowThinDown',
   component: ArrowThinDown,
 };
 
-const Template = (args) => <ArrowThinDown {...args} />;
+function Template(args) {
+  return <ArrowThinDown {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

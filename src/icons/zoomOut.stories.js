@@ -1,11 +1,13 @@
-import ZoomOut from 'icons/zoomOut';
+import ZoomOut from './zoomOut';
 
 export default {
   title: 'Icons/ZoomOut',
   component: ZoomOut,
 };
 
-const Template = (args) => <ZoomOut {...args} />;
+function Template(args) {
+  return <ZoomOut {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

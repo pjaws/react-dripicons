@@ -1,11 +1,13 @@
-import Trash from 'icons/trash';
+import Trash from './trash';
 
 export default {
   title: 'Icons/Trash',
   component: Trash,
 };
 
-const Template = (args) => <Trash {...args} />;
+function Template(args) {
+  return <Trash {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

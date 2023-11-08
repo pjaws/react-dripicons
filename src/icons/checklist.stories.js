@@ -1,11 +1,13 @@
-import Checklist from 'icons/checklist';
+import Checklist from './checklist';
 
 export default {
   title: 'Icons/Checklist',
   component: Checklist,
 };
 
-const Template = (args) => <Checklist {...args} />;
+function Template(args) {
+  return <Checklist {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

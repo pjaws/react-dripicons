@@ -1,11 +1,13 @@
-import MediaPlay from 'icons/mediaPlay';
+import MediaPlay from './mediaPlay';
 
 export default {
   title: 'Icons/MediaPlay',
   component: MediaPlay,
 };
 
-const Template = (args) => <MediaPlay {...args} />;
+function Template(args) {
+  return <MediaPlay {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

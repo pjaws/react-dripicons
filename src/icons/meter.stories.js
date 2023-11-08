@@ -1,11 +1,13 @@
-import Meter from 'icons/meter';
+import Meter from './meter';
 
 export default {
   title: 'Icons/Meter',
   component: Meter,
 };
 
-const Template = (args) => <Meter {...args} />;
+function Template(args) {
+  return <Meter {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

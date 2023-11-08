@@ -1,11 +1,13 @@
-import ViewApps from 'icons/viewApps';
+import ViewApps from './viewApps';
 
 export default {
   title: 'Icons/ViewApps',
   component: ViewApps,
 };
 
-const Template = (args) => <ViewApps {...args} />;
+function Template(args) {
+  return <ViewApps {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

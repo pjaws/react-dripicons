@@ -1,11 +1,13 @@
-import Pulse from 'icons/pulse';
+import Pulse from './pulse';
 
 export default {
   title: 'Icons/Pulse',
   component: Pulse,
 };
 
-const Template = (args) => <Pulse {...args} />;
+function Template(args) {
+  return <Pulse {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import ViewList from 'icons/viewList';
+import ViewList from './viewList';
 
 export default {
   title: 'Icons/ViewList',
   component: ViewList,
 };
 
-const Template = (args) => <ViewList {...args} />;
+function Template(args) {
+  return <ViewList {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

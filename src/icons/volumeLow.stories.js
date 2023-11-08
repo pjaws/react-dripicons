@@ -1,11 +1,13 @@
-import VolumeLow from 'icons/volumeLow';
+import VolumeLow from './volumeLow';
 
 export default {
   title: 'Icons/VolumeLow',
   component: VolumeLow,
 };
 
-const Template = (args) => <VolumeLow {...args} />;
+function Template(args) {
+  return <VolumeLow {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

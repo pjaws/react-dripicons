@@ -1,11 +1,13 @@
-import Suitcase from 'icons/suitcase';
+import Suitcase from './suitcase';
 
 export default {
   title: 'Icons/Suitcase',
   component: Suitcase,
 };
 
-const Template = (args) => <Suitcase {...args} />;
+function Template(args) {
+  return <Suitcase {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

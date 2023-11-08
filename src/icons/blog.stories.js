@@ -1,11 +1,13 @@
-import Blog from 'icons/blog';
+import Blog from './blog';
 
 export default {
   title: 'Icons/Blog',
   component: Blog,
 };
 
-const Template = (args) => <Blog {...args} />;
+function Template(args) {
+  return <Blog {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

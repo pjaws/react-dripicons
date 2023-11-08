@@ -1,11 +1,13 @@
-import Forward from 'icons/forward';
+import Forward from './forward';
 
 export default {
   title: 'Icons/Forward',
   component: Forward,
 };
 
-const Template = (args) => <Forward {...args} />;
+function Template(args) {
+  return <Forward {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

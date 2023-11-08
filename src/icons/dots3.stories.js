@@ -1,11 +1,13 @@
-import Dots3 from 'icons/dots3';
+import Dots3 from './dots3';
 
 export default {
   title: 'Icons/Dots3',
   component: Dots3,
 };
 
-const Template = (args) => <Dots3 {...args} />;
+function Template(args) {
+  return <Dots3 {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

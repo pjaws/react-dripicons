@@ -1,11 +1,13 @@
-import Export from 'icons/export';
+import Export from './export';
 
 export default {
   title: 'Icons/Export',
   component: Export,
 };
 
-const Template = (args) => <Export {...args} />;
+function Template(args) {
+  return <Export {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

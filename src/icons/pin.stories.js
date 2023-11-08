@@ -1,11 +1,13 @@
-import Pin from 'icons/pin';
+import Pin from './pin';
 
 export default {
   title: 'Icons/Pin',
   component: Pin,
 };
 
-const Template = (args) => <Pin {...args} />;
+function Template(args) {
+  return <Pin {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

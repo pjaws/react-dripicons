@@ -1,11 +1,13 @@
-import MediaRecord from 'icons/mediaRecord';
+import MediaRecord from './mediaRecord';
 
 export default {
   title: 'Icons/MediaRecord',
   component: MediaRecord,
 };
 
-const Template = (args) => <MediaRecord {...args} />;
+function Template(args) {
+  return <MediaRecord {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

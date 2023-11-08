@@ -1,11 +1,13 @@
-import GraphLine from 'icons/graphLine';
+import GraphLine from './graphLine';
 
 export default {
   title: 'Icons/GraphLine',
   component: GraphLine,
 };
 
-const Template = (args) => <GraphLine {...args} />;
+function Template(args) {
+  return <GraphLine {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

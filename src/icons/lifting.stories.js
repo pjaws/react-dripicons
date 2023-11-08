@@ -1,11 +1,13 @@
-import Lifting from 'icons/lifting';
+import Lifting from './lifting';
 
 export default {
   title: 'Icons/Lifting',
   component: Lifting,
 };
 
-const Template = (args) => <Lifting {...args} />;
+function Template(args) {
+  return <Lifting {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

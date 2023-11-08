@@ -1,11 +1,13 @@
-import Bookmarks from 'icons/bookmarks';
+import Bookmarks from './bookmarks';
 
 export default {
   title: 'Icons/Bookmarks',
   component: Bookmarks,
 };
 
-const Template = (args) => <Bookmarks {...args} />;
+function Template(args) {
+  return <Bookmarks {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

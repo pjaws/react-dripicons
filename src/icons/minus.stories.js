@@ -1,11 +1,13 @@
-import Minus from 'icons/minus';
+import Minus from './minus';
 
 export default {
   title: 'Icons/Minus',
   component: Minus,
 };
 
-const Template = (args) => <Minus {...args} />;
+function Template(args) {
+  return <Minus {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

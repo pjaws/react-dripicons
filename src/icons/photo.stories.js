@@ -1,11 +1,13 @@
-import Photo from 'icons/photo';
+import Photo from './photo';
 
 export default {
   title: 'Icons/Photo',
   component: Photo,
 };
 
-const Template = (args) => <Photo {...args} />;
+function Template(args) {
+  return <Photo {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

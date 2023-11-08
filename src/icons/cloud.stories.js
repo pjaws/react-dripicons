@@ -1,11 +1,13 @@
-import Cloud from 'icons/cloud';
+import Cloud from './cloud';
 
 export default {
   title: 'Icons/Cloud',
   component: Cloud,
 };
 
-const Template = (args) => <Cloud {...args} />;
+function Template(args) {
+  return <Cloud {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

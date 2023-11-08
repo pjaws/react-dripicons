@@ -1,11 +1,13 @@
-import Copy from 'icons/copy';
+import Copy from './copy';
 
 export default {
   title: 'Icons/Copy',
   component: Copy,
 };
 
-const Template = (args) => <Copy {...args} />;
+function Template(args) {
+  return <Copy {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

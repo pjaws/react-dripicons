@@ -1,11 +1,13 @@
-import Graduation from 'icons/graduation';
+import Graduation from './graduation';
 
 export default {
   title: 'Icons/Graduation',
   component: Graduation,
 };
 
-const Template = (args) => <Graduation {...args} />;
+function Template(args) {
+  return <Graduation {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

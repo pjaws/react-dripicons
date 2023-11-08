@@ -1,11 +1,13 @@
-import Web from 'icons/web';
+import Web from './web';
 
 export default {
   title: 'Icons/Web',
   component: Web,
 };
 
-const Template = (args) => <Web {...args} />;
+function Template(args) {
+  return <Web {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

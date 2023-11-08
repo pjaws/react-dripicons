@@ -1,11 +1,13 @@
-import Help from 'icons/help';
+import Help from './help';
 
 export default {
   title: 'Icons/Help',
   component: Help,
 };
 
-const Template = (args) => <Help {...args} />;
+function Template(args) {
+  return <Help {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

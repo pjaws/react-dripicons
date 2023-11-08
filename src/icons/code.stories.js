@@ -1,11 +1,13 @@
-import Code from 'icons/code';
+import Code from './code';
 
 export default {
   title: 'Icons/Code',
   component: Code,
 };
 
-const Template = (args) => <Code {...args} />;
+function Template(args) {
+  return <Code {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

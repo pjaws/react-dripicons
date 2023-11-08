@@ -1,11 +1,13 @@
-import Location from 'icons/location';
+import Location from './location';
 
 export default {
   title: 'Icons/Location',
   component: Location,
 };
 
-const Template = (args) => <Location {...args} />;
+function Template(args) {
+  return <Location {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

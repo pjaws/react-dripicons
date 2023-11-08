@@ -1,11 +1,13 @@
-import Link from 'icons/link';
+import Link from './link';
 
 export default {
   title: 'Icons/Link',
   component: Link,
 };
 
-const Template = (args) => <Link {...args} />;
+function Template(args) {
+  return <Link {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

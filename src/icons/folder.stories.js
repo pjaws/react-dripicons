@@ -1,11 +1,13 @@
-import Folder from 'icons/folder';
+import Folder from './folder';
 
 export default {
   title: 'Icons/Folder',
   component: Folder,
 };
 
-const Template = (args) => <Folder {...args} />;
+function Template(args) {
+  return <Folder {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

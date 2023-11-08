@@ -1,11 +1,13 @@
-import Pill from 'icons/pill';
+import Pill from './pill';
 
 export default {
   title: 'Icons/Pill',
   component: Pill,
 };
 
-const Template = (args) => <Pill {...args} />;
+function Template(args) {
+  return <Pill {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

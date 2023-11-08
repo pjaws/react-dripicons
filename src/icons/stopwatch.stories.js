@@ -1,11 +1,13 @@
-import Stopwatch from 'icons/stopwatch';
+import Stopwatch from './stopwatch';
 
 export default {
   title: 'Icons/Stopwatch',
   component: Stopwatch,
 };
 
-const Template = (args) => <Stopwatch {...args} />;
+function Template(args) {
+  return <Stopwatch {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

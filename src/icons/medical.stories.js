@@ -1,11 +1,13 @@
-import Medical from 'icons/medical';
+import Medical from './medical';
 
 export default {
   title: 'Icons/Medical',
   component: Medical,
 };
 
-const Template = (args) => <Medical {...args} />;
+function Template(args) {
+  return <Medical {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

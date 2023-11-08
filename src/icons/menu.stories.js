@@ -1,11 +1,13 @@
-import Menu from 'icons/menu';
+import Menu from './menu';
 
 export default {
   title: 'Icons/Menu',
   component: Menu,
 };
 
-const Template = (args) => <Menu {...args} />;
+function Template(args) {
+  return <Menu {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

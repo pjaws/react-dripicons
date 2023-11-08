@@ -1,11 +1,13 @@
-import Return from 'icons/return';
+import Return from './return';
 
 export default {
   title: 'Icons/Return',
   component: Return,
 };
 
-const Template = (args) => <Return {...args} />;
+function Template(args) {
+  return <Return {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

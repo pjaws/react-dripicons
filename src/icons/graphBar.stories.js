@@ -1,11 +1,13 @@
-import GraphBar from 'icons/graphBar';
+import GraphBar from './graphBar';
 
 export default {
   title: 'Icons/GraphBar',
   component: GraphBar,
 };
 
-const Template = (args) => <GraphBar {...args} />;
+function Template(args) {
+  return <GraphBar {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

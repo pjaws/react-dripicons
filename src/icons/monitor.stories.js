@@ -1,11 +1,13 @@
-import Monitor from 'icons/monitor';
+import Monitor from './monitor';
 
 export default {
   title: 'Icons/Monitor',
   component: Monitor,
 };
 
-const Template = (args) => <Monitor {...args} />;
+function Template(args) {
+  return <Monitor {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

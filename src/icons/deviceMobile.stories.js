@@ -1,11 +1,13 @@
-import DeviceMobile from 'icons/deviceMobile';
+import DeviceMobile from './deviceMobile';
 
 export default {
   title: 'Icons/DeviceMobile',
   component: DeviceMobile,
 };
 
-const Template = (args) => <DeviceMobile {...args} />;
+function Template(args) {
+  return <DeviceMobile {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

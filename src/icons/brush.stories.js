@@ -1,11 +1,13 @@
-import Brush from 'icons/brush';
+import Brush from './brush';
 
 export default {
   title: 'Icons/Brush',
   component: Brush,
 };
 
-const Template = (args) => <Brush {...args} />;
+function Template(args) {
+  return <Brush {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

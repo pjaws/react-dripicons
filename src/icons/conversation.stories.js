@@ -1,11 +1,13 @@
-import Conversation from 'icons/conversation';
+import Conversation from './conversation';
 
 export default {
   title: 'Icons/Conversation',
   component: Conversation,
 };
 
-const Template = (args) => <Conversation {...args} />;
+function Template(args) {
+  return <Conversation {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

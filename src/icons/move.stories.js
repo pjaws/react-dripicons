@@ -1,11 +1,13 @@
-import Move from 'icons/move';
+import Move from './move';
 
 export default {
   title: 'Icons/Move',
   component: Move,
 };
 
-const Template = (args) => <Move {...args} />;
+function Template(args) {
+  return <Move {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

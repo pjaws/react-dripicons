@@ -1,11 +1,13 @@
-import Retweet from 'icons/retweet';
+import Retweet from './retweet';
 
 export default {
   title: 'Icons/Retweet',
   component: Retweet,
 };
 
-const Template = (args) => <Retweet {...args} />;
+function Template(args) {
+  return <Retweet {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

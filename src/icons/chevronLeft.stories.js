@@ -1,11 +1,13 @@
-import ChevronLeft from 'icons/chevronLeft';
+import ChevronLeft from './chevronLeft';
 
 export default {
   title: 'Icons/ChevronLeft',
   component: ChevronLeft,
 };
 
-const Template = (args) => <ChevronLeft {...args} />;
+function Template(args) {
+  return <ChevronLeft {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

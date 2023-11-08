@@ -1,11 +1,13 @@
-import Clockwise from 'icons/clockwise';
+import Clockwise from './clockwise';
 
 export default {
   title: 'Icons/Clockwise',
   component: Clockwise,
 };
 
-const Template = (args) => <Clockwise {...args} />;
+function Template(args) {
+  return <Clockwise {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

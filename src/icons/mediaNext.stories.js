@@ -1,11 +1,13 @@
-import MediaNext from 'icons/mediaNext';
+import MediaNext from './mediaNext';
 
 export default {
   title: 'Icons/MediaNext',
   component: MediaNext,
 };
 
-const Template = (args) => <MediaNext {...args} />;
+function Template(args) {
+  return <MediaNext {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

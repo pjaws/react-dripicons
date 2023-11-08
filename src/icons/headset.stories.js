@@ -1,11 +1,13 @@
-import Headset from 'icons/headset';
+import Headset from './headset';
 
 export default {
   title: 'Icons/Headset',
   component: Headset,
 };
 
-const Template = (args) => <Headset {...args} />;
+function Template(args) {
+  return <Headset {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import Alarm from 'icons/alarm';
+import Alarm from './alarm';
 
 export default {
   title: 'Icons/Alarm',
   component: Alarm,
 };
 
-const Template = (args) => <Alarm {...args} />;
+function Template(args) {
+  return <Alarm {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

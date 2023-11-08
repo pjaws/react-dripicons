@@ -1,11 +1,13 @@
-import ViewThumb from 'icons/viewThumb';
+import ViewThumb from './viewThumb';
 
 export default {
   title: 'Icons/ViewThumb',
   component: ViewThumb,
 };
 
-const Template = (args) => <ViewThumb {...args} />;
+function Template(args) {
+  return <ViewThumb {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,13 @@
-import MediaPrevious from 'icons/mediaPrevious';
+import MediaPrevious from './mediaPrevious';
 
 export default {
   title: 'Icons/MediaPrevious',
   component: MediaPrevious,
 };
 
-const Template = (args) => <MediaPrevious {...args} />;
+function Template(args) {
+  return <MediaPrevious {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

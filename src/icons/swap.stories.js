@@ -1,11 +1,13 @@
-import Swap from 'icons/swap';
+import Swap from './swap';
 
 export default {
   title: 'Icons/Swap',
   component: Swap,
 };
 
-const Template = (args) => <Swap {...args} />;
+function Template(args) {
+  return <Swap {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

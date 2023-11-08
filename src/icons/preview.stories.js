@@ -1,11 +1,13 @@
-import Preview from 'icons/preview';
+import Preview from './preview';
 
 export default {
   title: 'Icons/Preview',
   component: Preview,
 };
 
-const Template = (args) => <Preview {...args} />;
+function Template(args) {
+  return <Preview {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {

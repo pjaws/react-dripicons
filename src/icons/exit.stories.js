@@ -1,11 +1,13 @@
-import Exit from 'icons/exit';
+import Exit from './exit';
 
 export default {
   title: 'Icons/Exit',
   component: Exit,
 };
 
-const Template = (args) => <Exit {...args} />;
+function Template(args) {
+  return <Exit {...args} />
+}
 
 export const Default = Template.bind({});
 Default.args = {
