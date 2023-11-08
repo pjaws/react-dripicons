@@ -5,7 +5,12 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+    'prettier',
+    'plugin:storybook/recommended',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -15,6 +20,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    'import/prefer-default-export': 'off',
     'jsx-a11y/anchor-is-valid': 'warn',
     'no-console': 'off',
     'react/jsx-filename-extension': 'off',
